@@ -39,6 +39,34 @@ public class EmployeeAnalytics {
                 .collect(Collectors.toList());
 
         System.out.println("Names of Engineering employees, sorted by salary descending: " + engineeringEmployees);
+
+        // ANSWER 2
+        // Names of the top 3 earners overall
+        List<String> top3Earners = emps.stream()
+                .sorted(Comparator.comparing(Employee::salary).reversed())
+                .limit(3)
+                .map(Employee::name)
+                .collect(Collectors.toList());
+
+        System.out.println("Names of the top 3 earners overall: " + top3Earners);
+
+        // ANSWER 3
+        // Employees hired before 2018-01-01, oldest hire first, as "name (year)" strings
+        List<String> employeesHiredBefore2018 = emps.stream()
+                .filter(e -> e.hireDate().isBefore(LocalDate.parse("2018-01-01")))
+                .sorted(Comparator.comparing(Employee::hireDate))
+                .map(e -> e.name() + " (" + e.hireDate().getYear() + ")")
+                .collect(Collectors.toList());
+
+        System.out.println("Employees hired before 2018-01-01: " + employeesHiredBefore2018);
+
+        // ANSWER 4
+        // All names joined as "Asha, Ravi, ..." using Collectors.joining
+        String joinedNames = emps.stream()
+                .map(Employee::name)
+                .collect(Collectors.joining(", "));
+
+        System.out.println("All names joined: " + joinedNames);
     }
 
 }
