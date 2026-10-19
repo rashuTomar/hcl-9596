@@ -1,12 +1,13 @@
 package org.example;
 
+import org.example.payment.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class OrderService {
 
-//    @Autowired // feild injection (not recommended)
+//    @Autowired // field injection (not recommended)
     private PaymentService paymentService;
 
     @Autowired // Constructor injection(recommended)
