@@ -28,4 +28,10 @@ public class EmployeeController {
         return demoEmployee.squareRoot(678);
     }
 
+    @GetMapping("/gtn")
+    public int checkgtn(){
+        return demoEmployee.checkGreater(100, 99);
+
+    }
+
 }

@@ -20,4 +20,10 @@ public class EmpRepImp implements EmpRepo {
         return a+b ;
     }
 
+    @Override
+    public int checkGreater(int a, int b){
+        int max = (a > b) ? a : b;
+        return max;
+    }
+
 }

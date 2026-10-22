@@ -17,4 +17,8 @@ public class DemoEmployee {
         return repo.squareroot(2000);
     }
 
+    public int checkGreater(int a, int b){
+        return repo.checkGreater(100,99);
+    }
+
 }
