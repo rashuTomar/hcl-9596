@@ -4,7 +4,7 @@ import com.abesproject.hclhrms.hcl_hrms.EmployeeServiceImp;
 import com.abesproject.hclhrms.hcl_hrms.entity.Employee;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -41,8 +41,8 @@ public class EmployeeController {
         return  employeeServiceImp.getEmpById();
     }
 
-    @DeleteMapping("/deleteemp/{empId}")
-    public String deleteEmployee(@PathVariable long empId) {
+    @DeleteMapping("/deletebyid")
+    public String deleteEmployee(@RequestParam long empId) {
         return employeeServiceImp.deleteById(empId);
     }
 

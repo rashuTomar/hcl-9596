@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.net.ssl.HttpsURLConnection;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/students")
@@ -28,6 +29,18 @@ public class StudentController {
     @GetMapping("/get/{id}")
     public ResponseEntity<Student> getStudent(@PathVariable Long id){
         Student studentResp= studentService.getStudent(id);
+        if(studentResp == null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
         return ResponseEntity.ok(studentResp);
     }
+    @GetMapping("/getall")
+    public ResponseEntity<List<Student>> getAllStudents(){
+        List<Student> studentResp= studentService.getAllStudents();
+        if(studentResp == null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        return ResponseEntity.ok(studentResp);
+    }
+
 }

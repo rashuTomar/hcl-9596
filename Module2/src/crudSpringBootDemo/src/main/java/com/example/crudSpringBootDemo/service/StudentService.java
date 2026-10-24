@@ -4,6 +4,7 @@ import com.example.crudSpringBootDemo.entity.Student;
 import com.example.crudSpringBootDemo.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -26,5 +27,10 @@ public class StudentService {
             return studentResp.get();
         }
         return null;
+    }
+
+    public List<Student> getAllStudents(){
+        List<Student> studentResp = studentRepository.findAll();
+        return studentResp;
     }
 }
