@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 import javax.net.ssl.HttpsURLConnection;
 import java.util.List;
 
@@ -34,6 +35,7 @@ public class StudentController {
         }
         return ResponseEntity.ok(studentResp);
     }
+
     @GetMapping("/getall")
     public ResponseEntity<List<Student>> getAllStudents(){
         List<Student> studentResp= studentService.getAllStudents();
@@ -41,6 +43,31 @@ public class StudentController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
         return ResponseEntity.ok(studentResp);
+    }
+    @PutMapping ("/update/{id}")
+    public ResponseEntity<Student> updateStudent(@PathVariable Long id, @RequestBody Student studentReq){
+        Student studentResp= studentService.updateStudent(id, studentReq);
+        if(studentResp == null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        return ResponseEntity.ok(studentResp);
+    }
+    @DeleteMapping ("/delete/{id}")
+    public ResponseEntity<String> deleteStudent(@PathVariable Long id){
+        Boolean isDeleted = studentService.deleteStudent(id);
+        if(! isDeleted){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok("Student deleted successfully");
+    }
+
+    @PatchMapping("/delete-soft/{id}")
+    public ResponseEntity<String> softDelete (@PathVariable Long id){
+        Boolean isDeleted = studentService.deleteSoftly(id);
+        if (!isDeleted){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok("Soft deleted Successfully");
     }
 
 }
