@@ -1,4 +1,3 @@
-import { useState } from 'react'
 
 import './App.css'
 import SampleCode from './components/SampleCode'
@@ -19,11 +18,12 @@ function App() {
   //   empId: "0924809q3"
   // }
   // ]
+
   return (
     <>
 
-      {/* <h2>WeLcoME to HRmS </h2> */}
-      {/* <SampleCode empdata={employee}/> */}
+      {/* <h2>WeLcoME to HRmS </h2>
+      <SampleCode empdata={employee}/> */}
 
       {/* {
         employee.map((ele)=>(
@@ -31,6 +31,7 @@ function App() {
       ))
     } */}
 
+    <SampleCode2></SampleCode2>
 
 
     </>
