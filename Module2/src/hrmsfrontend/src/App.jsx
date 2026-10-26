@@ -2,6 +2,7 @@
 import './App.css'
 import SampleCode from './components/SampleCode'
 import SampleCode2 from './components/SampleCode2'
+import UseFetchApi from './components/UseFetchApi'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
     } */}
 
     <SampleCode2></SampleCode2>
+    <UseFetchApi></UseFetchApi>
 
 
     </>
