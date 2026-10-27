@@ -1,3 +1,4 @@
+
 package org.abes.hrmsdatabase.service;
 
 import org.abes.hrmsdatabase.model.Employee;
@@ -7,42 +8,46 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeService {
+
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    public String createnewEmployee(){
-        Employee emp1= new Employee(200L, "Mishra", "javaStack", "sde");
-        Employee emp2= new Employee(199L, "Yashu", "javaStack", "quality analysis");
-        Employee emp3= new Employee(198L, "Riya", "MERN", "manager");
+    public String createnewEmployee(Employee newEmp) {
 
-        employeeRepository.save(emp1);
-        employeeRepository.save(emp2);
-        employeeRepository.save(emp3);
+        employeeRepository.save(newEmp);
+
         return "Employees are added successfully";
     }
 
-
-    public Employee getEmployeeById(long empid){
-        return employeeRepository.findById(empid).orElse(null);
+    public Employee getEmployeeById(long empId) {
+        return employeeRepository.findById(empId).orElse(null);
     }
 
-    public Employee updateEmployee(long empid, Employee updatedEmployee){
-        Employee employee = employeeRepository.findById(empid).orElse(null);
+    public Employee updateEmployee(long empId, Employee updatedEmployee) {
+
+        Employee employee = employeeRepository.findById(empId).orElse(null);
+
         if (employee == null) {
             return null;
         }
 
-        employee.setEmp_name(updatedEmployee.getEmp_name());
+        employee.setEmpName(updatedEmployee.getEmpName());
+        employee.setEmail(updatedEmployee.getEmail());
+        employee.setPassword(updatedEmployee.getPassword());
         employee.setStack(updatedEmployee.getStack());
         employee.setDesignation(updatedEmployee.getDesignation());
+
         return employeeRepository.save(employee);
     }
 
-    public Employee DeleteById(long empid){
-        Employee employee = employeeRepository.findById(empid).orElse(null);
+    public Employee DeleteById(long empId) {
+
+        Employee employee = employeeRepository.findById(empId).orElse(null);
+
         if (employee != null) {
-            employeeRepository.deleteById(empid);
+            employeeRepository.deleteById(empId);
         }
+
         return employee;
     }
 }
