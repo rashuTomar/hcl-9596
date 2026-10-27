@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="28e9175a-4932-456f-89e6-fc174368b6f3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crudSpringBootDemo/CrudSpringBootDemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crudSpringBootDemo/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crudSpringBootDemo/entity/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crudSpringBootDemo/repository/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crudSpringBootDemo/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/crudSpringBootDemo/CrudSpringBootDemoApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rashuTomar&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rashuTomar/hcl-9596.git&quot;,
+    &quot;accountId&quot;: &quot;a4b97de9-b452-4142-b285-9c4ccfdf865a&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0009049646839028" />
+      <entry key="MS500" value="1.2855050977173246" />
+      <entry key="S2" value="2.200709500212946" />
+      <entry key="S5" value="2.897040804600209" />
+      <entry key="S10" value="3.33456938352029" />
+      <entry key="S30" value="3.744545133710544" />
+      <entry key="S60" value="3.8673975292301623" />
+      <entry key="M2" value="3.932422851372352" />
+      <entry key="M5" value="3.972655280543636" />
+      <entry key="M10" value="3.9862746795363293" />
+      <entry key="M15" value="3.9908386758621694" />
+      <entry key="M30" value="4.003686806650711" />
+      <entry key="H1" value="4.9029573633794445" />
+      <entry key="H2" value="13.733273570241828" />
+      <entry key="H4" value="45.33369086374323" />
+      <entry key="D1" value="370.53908480670316" />
+      <entry key="W1" value="610.0873401856052" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="6.113586033559745E-247" />
+      <entry key="S60" value="1.3491012588365015E-123" />
+      <entry key="M2" value="6.6427000421216505E-62" />
+      <entry key="M5" value="1.2806373746049091E-24" />
+      <entry key="M10" value="5.45699022947592E-12" />
+      <entry key="M15" value="9.402561934765257E-8" />
+      <entry key="M30" value="0.0016614854508063" />
+      <entry key="H1" value="0.22279361507764237" />
+      <entry key="H2" value="2.696850085670343" />
+      <entry key="H4" value="13.329985315100728" />
+      <entry key="D1" value="140.70180248295725" />
+      <entry key="W1" value="237.60117868149945" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="9.049655117019724E-4" />
+      <entry key="MS500" value="0.30076605598234835" />
+      <entry key="S2" value="1.5519738841663773" />
+      <entry key="S5" value="2.5547358678948564" />
+      <entry key="S10" value="3.145406543189168" />
+      <entry key="S30" value="3.67698435389698" />
+      <entry key="S60" value="3.8330186375266506" />
+      <entry key="M2" value="3.915080985203004" />
+      <entry key="M5" value="3.965681588500258" />
+      <entry key="M10" value="3.98278164523626" />
+      <entry key="M15" value="3.988508702685317" />
+      <entry key="M30" value="4.0041806915609985" />
+      <entry key="H1" value="5.125039869551413" />
+      <entry key="H2" value="16.42904960305384" />
+      <entry key="H4" value="58.66158172878503" />
+      <entry key="D1" value="511.23750151392056" />
+      <entry key="W1" value="847.6877138580901" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3L5K8O3CQYbYSGsIUSfb9iblkfF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CrudSpringBootDemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="CrudSpringBootDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="dtoDemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.crudSpringBootDemo.CrudSpringBootDemoApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.crudSpringBootDemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.CrudSpringBootDemoApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28e9175a-4932-456f-89e6-fc174368b6f3" name="Changes" comment="" />
+      <created>1792738333150</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1792738333150</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/crudSpringBootDemo/controller/StudentController.java</url>
+          <line>47</line>
+          <properties class="com.example.crudSpringBootDemo.controller.StudentController" method="updateStudent">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
