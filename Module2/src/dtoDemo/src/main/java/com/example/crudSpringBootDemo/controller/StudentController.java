@@ -24,13 +24,13 @@ public class StudentController {
         this.studentService=studentService;
     }
 
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<StudentResponseDTO> createStudent(@Valid @RequestBody StudentRequestDTO studentRequestDTO){
         StudentResponseDTO createdStudent= studentService.createStudent(studentRequestDTO);
         return ResponseEntity.ok(createdStudent);
 
     }
-    @GetMapping("/get/{id}")
+    @GetMapping("/id")
     public ResponseEntity<Student> getStudent(@PathVariable Long id){
         Student studentResp= studentService.getStudent(id);
         if(studentResp == null){
@@ -39,7 +39,7 @@ public class StudentController {
         return ResponseEntity.ok(studentResp);
     }
 
-    @GetMapping("/getall")
+    @GetMapping
     public ResponseEntity<List<Student>> getAllStudents(){
         List<Student> studentResp= studentService.getAllStudents();
         if(studentResp == null){
@@ -47,7 +47,7 @@ public class StudentController {
         }
         return ResponseEntity.ok(studentResp);
     }
-    @PutMapping ("/update/{id}")
+    @PutMapping
     public ResponseEntity<Student> updateStudent(@PathVariable Long id, @RequestBody Student studentReq){
         Student studentResp= studentService.updateStudent(id, studentReq);
         if(studentResp == null){
@@ -55,7 +55,7 @@ public class StudentController {
         }
         return ResponseEntity.ok(studentResp);
     }
-    @DeleteMapping ("/delete/{id}")
+    @DeleteMapping
     public ResponseEntity<String> deleteStudent(@PathVariable Long id){
         Boolean isDeleted = studentService.deleteStudent(id);
         if(! isDeleted){

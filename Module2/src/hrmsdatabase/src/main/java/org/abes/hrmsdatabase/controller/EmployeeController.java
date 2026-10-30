@@ -5,9 +5,8 @@ import org.abes.hrmsdatabase.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
-@CrossOrigin("http://localhost:5173/")
+@CrossOrigin("http://localhost:5173")
 @RequestMapping("/v1/user")
 public class EmployeeController {
 
@@ -23,6 +22,11 @@ public class EmployeeController {
     public String addnewEmployee(@RequestBody Employee newEmp ){
         System.out.println(newEmp.getDesignation());
         return employeeService.createnewEmployee(newEmp);
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestBody Employee employee) {
+        return employeeService.login(employee);
     }
 
     @GetMapping("/findbyid/{empid}")

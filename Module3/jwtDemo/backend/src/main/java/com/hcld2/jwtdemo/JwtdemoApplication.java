@@ -1,13 +1,13 @@
-package com.example.crudDtoDemo;
+package com.hcld2.jwtdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CrudDtoDemoApplication {
+public class JwtdemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CrudDtoDemoApplication.class, args);
+		SpringApplication.run(JwtdemoApplication.class, args);
 	}
 
 }

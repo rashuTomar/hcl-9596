@@ -26,10 +26,10 @@ public class StudentService {
     public Student getStudent(Long id){
         Optional<Student> studentResp= studentRepository.findByIdAndDeletedIsFalse(id);
 
-        if(studentResp.isPresent()){
+//        if(studentResp.isPresent()){
             return studentResp.get();
-        }
-        return null;
+//        }
+//        return null;
     }
 
     public List<Student> getAllStudents(){

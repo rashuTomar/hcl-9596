@@ -1,10 +1,10 @@
-package com.example.crudDtoDemo;
+package com.hcld2.jwtdemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CrudDtoDemoApplicationTests {
+class JwtdemoApplicationTests {
 
 	@Test
 	void contextLoads() {

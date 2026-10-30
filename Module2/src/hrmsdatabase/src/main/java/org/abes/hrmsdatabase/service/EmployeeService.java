@@ -50,4 +50,16 @@ public class EmployeeService {
 
         return employee;
     }
+
+    public String login(Employee loginRequest) {
+        if (loginRequest == null || loginRequest.getPassword() == null) {
+            return "Invalid employee ID or password";
+        }
+
+        Employee employee = employeeRepository.findById(loginRequest.getEmpId()).orElse(null);
+        if (employee == null || !loginRequest.getPassword().equals(employee.getPassword())) {
+            return "Invalid employee ID or password";
+        }
+        return "Login successful";
+    }
 }

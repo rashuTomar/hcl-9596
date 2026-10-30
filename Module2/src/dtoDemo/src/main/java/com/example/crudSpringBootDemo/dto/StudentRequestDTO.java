@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 
 public class StudentRequestDTO {
 
-    @NotBlank(message = "Name cannot be empty")
+    @NotBlank(message = "Name cannot be empty ")
     private String name;
 
     @Min(value = 18)

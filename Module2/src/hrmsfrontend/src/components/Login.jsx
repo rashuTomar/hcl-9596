@@ -1,27 +1,90 @@
-import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';   
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
 
 function Login() {
+  const [empId, setEmpId] = useState('')
+  const [password, setPassword] = useState('')
+  const [message, setMessage] = useState('')
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
+
+  
+async function verifyLogin(event) {
+  event.preventDefault();
+  setLoading(true);
+  setMessage('');
+
+  try {
+    const params = new URLSearchParams({
+      empId: empId,
+      password: password
+    });
+
+    const response = await fetch(
+      `http://localhost:8080/v1/user/login?${params.toString()}`,
+      {
+        method: 'POST'
+      }
+    );
+
+    const result = await response.text();
+
+    if (!response.ok) {
+      throw new Error(result || 'Login request failed');
+    }
+
+    if (result === 'Login successful') {
+      sessionStorage.setItem('loggedInEmpId', empId)
+      navigate('/dashboard', { state: { empId } })
+    } else {
+      setMessage(result);
+    }
+  } catch (error) {
+    setMessage(
+      error.message || 'Unable to connect to the server'
+    );
+  } finally {
+    setLoading(false);
+  }
+}
+
   return (
-    <div> 
-        <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Login</button>
-</form>
-      
+    <div>
+      <form onSubmit={verifyLogin}>
+        <div className="form-group">
+          <label htmlFor="employeeId">Employee ID</label>
+          <input
+            type="number"
+            className="form-control"
+            id="employeeId"
+            placeholder="Enter employee ID"
+            value={empId}
+            onChange={(event) => setEmpId(event.target.value)}
+            required
+          />
+        </div>
+
+        <div className="form-group mt-2">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            className="form-control"
+            id="password"
+            placeholder="Password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            required
+          />
+        </div>
+
+        <button type="submit" className="btn btn-primary mt-3" disabled={loading}>
+          {loading ? 'Logging in...' : 'Login'}
+        </button>
+
+        {message && <div className="mt-3 alert alert-danger">{message}</div>}
+      </form>
     </div>
   )
 }

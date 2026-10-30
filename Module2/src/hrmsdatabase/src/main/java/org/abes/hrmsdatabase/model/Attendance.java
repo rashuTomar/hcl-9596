@@ -1,5 +1,6 @@
 package org.abes.hrmsdatabase.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 @Entity(name="attendance")
 public class Attendance {
 
+    @JsonCreator // used for explicitly telling to use this constructor
     public Attendance(){
 
     }
@@ -16,7 +18,7 @@ public class Attendance {
     @Column(name="attendanceid", nullable = false, unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private long attendanceId;
+    private Long attendanceId;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "empid")
